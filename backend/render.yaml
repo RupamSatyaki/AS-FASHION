@@ -1,0 +1,12 @@
+services:
+  - type: backend
+    name: backend
+    env: node
+    build:
+      context: .
+      docker:
+        - node:14
+    port: 3000
+    envVars:
+      - key: NODE_ENV
+        value: production
